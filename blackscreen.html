@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Black Screen(Double Click for Fullscreen)</title>
+<style>
+body {
+  background-color: black;
+  overflow: hidden; /* Hide scrollbars */
+}
+</style>
+</head>
+<body>
+
+<!by expergefactor>
+
+<script>
+  // Function to handle double-click for fullscreen
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+
+  // Event listener for double-click
+  document.addEventListener('dblclick', toggleFullscreen);
+</script>
+
+</body>
+</html>
